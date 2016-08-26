@@ -35,19 +35,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 		setContentView(R.layout.activity_main);
 		preview = (SurfaceView) findViewById(R.id.preview);
 		faceView = (FaceView) findViewById(R.id.mfaceview);
