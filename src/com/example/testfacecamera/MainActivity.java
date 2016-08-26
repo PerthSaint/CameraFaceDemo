@@ -39,6 +39,15 @@ public class MainActivity extends Activity {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		setContentView(R.layout.activity_main);
 		preview = (SurfaceView) findViewById(R.id.preview);
 		faceView = (FaceView) findViewById(R.id.mfaceview);
