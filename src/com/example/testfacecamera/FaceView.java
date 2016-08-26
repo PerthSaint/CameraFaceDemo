@@ -73,21 +73,14 @@ public class FaceView extends ImageView {
 			mFaceIndicator.setBounds(Math.round(mRect.left),
 					Math.round(mRect.top), Math.round(mRect.right),
 					Math.round(mRect.bottom));
-			// mFaceIndicator.draw(canvas);
+//			 mFaceIndicator.draw(canvas);
 			canvas.drawRect(mRect, mLinePaint);
 			Face f = mFaces[i];
 			Log.e("---", f.leftEye + "--" + f.rightEye + "---" + f.mouth
 					+ "---" + f.rect.toShortString() + "---" + f.score + "--");
 		}
 		if (len > 0) {
-//			mMatrix.postRotate(0);
-			
-			
 			Face f = mFaces[0];
-//			mMatrix.mapRect(mRect);
-			
-			
-			
 			float[] p1=new float[2];
 			float[] p2=new float[2];
 			float[] p3=new float[2];
@@ -95,9 +88,6 @@ public class FaceView extends ImageView {
 			float[] p21=new float[]{ f.rightEye.x,
 				f.rightEye.y};
 			float[] p31=new float[]{f.mouth.x, f.mouth.y};
-			
-			
-//			mMatrix.mapPoints(pts)
 			mMatrix.mapPoints(p1, p11);
 			mMatrix.mapPoints(p2, p21);
 			mMatrix.mapPoints(p3, p31);
@@ -107,9 +97,6 @@ public class FaceView extends ImageView {
 					mLinePaint);
 			canvas.drawLine(p3[0], p3[1], p1[0], p1[1],
 					mLinePaint);
-//			mMatrix.mapPoints(new float[] {,});
-//			mMatrix.mapPoints(new float[] { f.leftEye.x, f.leftEye.y });
-//			mMatrix.mapPoints(new float[] { f.leftEye.x, f.leftEye.y });
 
 		}
 		// Log.e("ondraw....", mFaces.length + "人数");
